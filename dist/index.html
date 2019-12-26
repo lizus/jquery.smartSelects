@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="./css/jquery.smartSelect.css">
+  </head>
+  <body>
+
+    <div class="smartSelect" data-component="smartSelect" data-total="5" data-row="5">
+      <textarea class="smartSelect-value hidden" data-type="jsonp" data-field="value" name="sample"></textarea>
+      <textarea class="smartSelect-source hidden" data-type="jsonp" data-field="source"></textarea>
+      <input class="smartSelect-ajax hidden" type="hidden" data-type="string" data-field="ajax" value="http://localhost:8000/test.php" />
+      <ul class="selected-ul" data-field="selected"></ul>
+    </div>
+
+    <script type="text/javascript">
+    (function(){
+      if(typeof Promise != 'function') {
+        document.write('<script src="./js/browser-polyfill.min.js" charset="utf-8"><\/script>');
+      }
+    })();
+    </script>
+    <!--[if IE]>
+    <script src="./js/browser.min.js" charset="utf-8"></script>
+    <![endif]-->
+    <script src="./js/jquery.js" charset="utf-8"></script>
+    <script src="./js/jquery.smartSelect.js" charset="utf-8"></script>
+  </body>
+</html>
