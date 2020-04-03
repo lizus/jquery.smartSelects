@@ -16,7 +16,7 @@ const $=jQuery;
 const dropdown_data_prepare = function (ele){
   const filterData=compose(filter(function (val){
           if (not(is(Object,val)) || isNil(val.value) || isNil(val.key)) return false;
-          if(match(get_search_keyword(ele),val.value).length>0) return true;
+          if(match(get_search_keyword(ele).toLowerCase(),val.value.toLowerCase()).length>0) return true;
           return false;
         }),json_decode);
 
